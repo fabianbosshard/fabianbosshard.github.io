@@ -22,10 +22,34 @@
       --accent:#0969da;
     }}
 
+    /* background */
+    html,              /* full-bleed */
+    #canvas {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {             /* dark stage for green blips */
+      margin: 0;
+      padding: 0;
+      background: #111;
+    }
+
+    #canvas{
+      position:fixed;
+      inset:0;             /* full viewport, shorthand for top/right/bottom/left:0 */
+      z-index:-1; 
+      pointer-events:none; /* make it “click-through” */
+    }
+
     /* ─── GLOBAL RESET ─── */
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6;}
+    body{
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--fg);
+      line-height:1.6;
+    }
 
     /* ─── UNIVERSAL LINK STYLE ─── */
     a{color:var(--accent);text-decoration:none;border-bottom:1px dashed transparent;transition:border-color .3s;}

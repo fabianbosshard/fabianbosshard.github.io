@@ -25,7 +25,7 @@
     /* ─── GLOBAL RESET ─── */
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6;}
+    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6;overflow-anchor:none}
 
     /* ─── UNIVERSAL LINK STYLE ─── */
     a{color:var(--accent);text-decoration:none;border-bottom:1px dashed transparent;transition:border-color .3s;}
@@ -42,8 +42,8 @@
 
     /* ─── SECTIONS fade-in on scroll ─── */
     main{max-width:1200px;margin:0 auto;padding:0 2rem 5rem;}
-    section{margin-top:4rem;opacity:0;transform:translateY(40px);transition:all .6s ease;}
-    section.visible{opacity:1;transform:none}
+    section{margin-top:4rem;opacity:0;}
+    section.visible{opacity:1;}
     section h2{font-size:clamp(1.75rem,3.8vw,2.5rem);border-bottom:1px solid var(--border);padding-bottom:.5rem;margin-bottom:1.5rem;}
 
     /* ─── SUMMARY CARDS ─── */

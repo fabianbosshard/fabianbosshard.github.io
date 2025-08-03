@@ -9,7 +9,8 @@
       --fg:#e6edf3;
       --muted:#8b949e;
       --accent:#58a6ff;
-      --highlights:#ae27a9;
+      --code:#fe1cc9;
+      --highlights:#27ae6f;
       --radius:12px;
     }
     @media(prefers-color-scheme:light){:root{
@@ -71,7 +72,7 @@
     footer{margin-top:4rem;margin-bottom:2rem;text-align:center;font-size:.875rem;color:var(--muted);}    
 
     /* ─── PULSE-CURSOR ─── */
-    .prompt{font-family:monospace;color:#00be23;font-size:1.2rem;display:inline-block;margin-bottom:2rem}
+    .prompt{font-family:monospace;color:var(--code);font-size:1.2rem;display:inline-block;margin-bottom:2rem}
     .prompt::after{content:"_";animation:blink 1s steps(2,end) infinite;}
     @keyframes blink{0%,50%{opacity:1}50.01%,100%{opacity:0}}
 

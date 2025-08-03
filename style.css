@@ -3,22 +3,22 @@
     /* ─── COLOR TOKENS ─── */
     :root{
       /* dark (default) */
-      --bg:#0d1117;
-      --surface:#161b22;
-      --border:#30363d;
-      --fg:#e6edf3;
-      --muted:#8b949e;
+      --bg:#000000;
+      --surface:#151515;
+      --border:#3f3f3f;
+      --fg:#ffffff;
+      --muted:#868686;
       --accent:#58a6ff;
       --code:#fe1cc9;
       --highlights:#27ae6f;
       --radius:12px;
     }
     @media(prefers-color-scheme:light){:root{
-      --bg:#fafbfc;
-      --surface:#ffffff;
-      --border:#d0d7de;
-      --fg:#24292f;
-      --muted:#57606a;
+      --bg:#ffffff;
+      --surface:#f8f8f8;
+      --border:#c1c1c1;
+      --fg:#000000;
+      --muted:#727272;
       --accent:#0969da;
     }}
 
@@ -27,12 +27,13 @@
     #canvas {
       width: 100%;
       height: 100%;
+      background:var(--bg);
     }
 
     body {             /* dark stage for green blips */
       margin: 0;
       padding: 0;
-      background: #111;
+      background: transparent;
     }
 
     #canvas{
@@ -72,7 +73,15 @@
 
     /* ─── SUMMARY CARDS ─── */
     .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.5rem;}
-    .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;transition:transform .4s ease,box-shadow .4s ease;position:relative;cursor:pointer}
+    .card{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:1.5rem;
+      transition:transform .4s ease,box-shadow .4s ease;
+      position:relative;
+      cursor:pointer
+    }
     @media (hover: hover) and (pointer: fine) {
       .card:hover {
         transform: translateY(-6px) scale(1.02);
@@ -96,8 +105,17 @@
     footer{margin-top:4rem;margin-bottom:2rem;text-align:center;font-size:.875rem;color:var(--muted);}    
 
     /* ─── PULSE-CURSOR ─── */
-    .prompt{font-family:monospace;color:var(--code);font-size:1.2rem;display:inline-block;margin-bottom:2rem}
-    .prompt::after{content:"_";animation:blink 1s steps(2,end) infinite;}
+    .prompt{
+      font-family:monospace;
+      color:var(--code);
+      font-size:1.2rem;
+      display:inline-block;
+      margin-bottom:2rem
+    }
+    .prompt::after{
+      content:"_";
+      animation:blink 1s steps(2,end) infinite;
+    }
     @keyframes blink{0%,50%{opacity:1}50.01%,100%{opacity:0}}
 
     /* ─── PROMPT BAR ─── */
@@ -105,15 +123,10 @@
       position:sticky;      /* keeps it fixed at the very top */
       top:0;
       width:100%;
-      background:var(--surface); /* re-use your existing dark/light token */
+      background:var(--bg); /* re-use your existing dark/light token */
       border-bottom:1px solid var(--border);
       padding:.25rem 0.75rem;
       z-index:999;          /* stays above everything else */
     }
     /* re-use the old blinking-cursor prompt style, but kill the margin */
     .prompt-bar .prompt{margin:0;}
-
-    /* ─── NICE SCROLLBAR ─── */
-    ::-webkit-scrollbar{width:12px}
-    ::-webkit-scrollbar-track{background:var(--bg)}
-    ::-webkit-scrollbar-thumb{background:var(--border);border-radius:var(--radius)}

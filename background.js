@@ -7,7 +7,6 @@ jQuery(function () {
 
   const canvas = oCanvas.create({
     canvas: "#canvas",
-    background: "#111",
     fps: 60
   });
 

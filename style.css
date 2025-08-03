@@ -93,14 +93,3 @@
     ::-webkit-scrollbar{width:12px}
     ::-webkit-scrollbar-track{background:var(--bg)}
     ::-webkit-scrollbar-thumb{background:var(--border);border-radius:var(--radius)}
-
-    /* ─── Blinking-circles background ─── */
-    #bg-canvas {
-        position: fixed;
-        top: 0;               /* pin to top */
-        left: 0;              /* pin to left */
-        width: 100vw;
-        height: 100vh;
-        z-index: -100;
-        display: block;       /* ensure it renders */
-    }

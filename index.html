@@ -67,7 +67,9 @@
       <img src="icons/mail.svg" alt="Email">
     </a>
   </p>
+</footer>
 
+<footer>
   <div class="footer-content">
     <a href="https://github.com/fabianbosshard/fabianbosshard.github.io">Source on GitHub</a>
   </div>
@@ -89,6 +91,10 @@
     const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}),{threshold:0.15});
     document.querySelectorAll('section').forEach(s=>io.observe(s));
   </script>
-  <script src="circles.js"></script>
+<!-- after your footer, before your own script -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ocanvas@2.8.0/dist/ocanvas.min.js"></script>
+<!-- then your pulsing-circle code: -->
+<script src="background.js"></script>
 </body>
 </html>

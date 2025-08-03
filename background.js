@@ -5,6 +5,10 @@ jQuery(function () {
   const ys = [...Array($(window).innerHeight()).keys()];
   const pick = arr => arr[Math.floor(Math.random() * arr.length)];
 
+  const highlightColor = getComputedStyle(document.documentElement)
+                         .getPropertyValue('--highlights')
+                         .trim();
+
   const canvas = oCanvas.create({
     canvas: "#canvas",
     fps: 60
@@ -17,7 +21,7 @@ jQuery(function () {
       y: pick(ys),
       origin: { x: "center", y: "center" },
       radius: 0,
-      fill: "#27ae60",
+      fill: highlightColor,
       opacity: 1
     });
 

@@ -1,41 +1,44 @@
-// background.js
-jQuery(function () {
-  // Pre-compute possible x/y positions
-  const xs = [...Array($(window).innerWidth()).keys()];
-  const ys = [...Array($(window).innerHeight()).keys()];
-  const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+/* background.js – Vanta FOG, 100 % driven by CSS variables */
 
-  const highlightColor = getComputedStyle(document.documentElement)
-                         .getPropertyValue('--highlights')
-                         .trim();
+(function () {
+  let vanta;
 
-  const canvas = oCanvas.create({
-    canvas: "#canvas",
-    fps: 60
-  });
+  /* helpers */
+  const css        = prop => getComputedStyle(document.documentElement).getPropertyValue(prop).trim();
+  const cssFloat   = (prop, dflt) => parseFloat(css(prop)) || dflt;
+  const cssBool    = (prop, dflt) => (parseInt(css(prop)) || 0) ? true : dflt;
+  const cssColor   = (prop, dflt) => parseInt((css(prop) || dflt).replace('#', '0x'), 16);
 
-  // every 100 ms: create a tiny dot that grows & fades
-  setInterval(() => {
-    const dot = canvas.display.ellipse({
-      x: pick(xs),
-      y: pick(ys),
-      origin: { x: "center", y: "center" },
-      radius: 0,
-      fill: highlightColor,
-      opacity: 1
+  function make() {
+    return VANTA.FOG({
+      el: '#vanta-bg',
+
+      /* dimensions & controls */
+      minHeight:     cssFloat('--vanta-minh', 200),
+      minWidth:      cssFloat('--vanta-minw', 200),
+      mouseControls: cssBool ('--vanta-mouse', true),
+      touchControls: cssBool ('--vanta-touch', true),
+      gyroControls:  cssBool ('--vanta-gyro',  false),
+
+      /* colours */
+      highlightColor: cssColor('--vanta-highlight', '#dcb45f'),
+      midtoneColor:   cssColor('--vanta-midtone',   '#e86e5c'),
+      lowlightColor:  cssColor('--vanta-lowlight',  '#7c5fff'),
+      baseColor:      cssColor('--vanta-base',      '#e1b5b5'),
+
+      /* dynamics */
+      blurFactor: cssFloat('--vanta-blur',  0.70),
+      speed:      cssFloat('--vanta-speed', 1.00),
+      zoom:       cssFloat('--vanta-zoom',  1.00)
     });
+  }
 
-    canvas.addChild(dot);
+  /* first paint */
+  vanta = make();
 
-    dot.animate(
-      { radius: 12, opacity: 0 },
-      { duration: 1000, easing: "linear" }
-    );
-  }, 100);
-
-  // keep the canvas size in sync with the window
-  $(window).on("resize", () => {
-    canvas.width = $(window).innerWidth();
-    canvas.height = $(window).innerHeight();
-  }).trigger("resize");
-});
+  /* rebuild if the OS theme flips */
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    vanta?.destroy();
+    vanta = make();
+  });
+})();

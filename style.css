@@ -1,32 +1,55 @@
 
 /* style.css */
-    /* ─── COLOR TOKENS ─── */
-/* ── COLOR TOKENS (v2) ───────────────────────────────────────── */
+
+/* ── GLOBAL COLOR TOKENS ───────────────────────────────────── */
 :root{
-  /* dark (default) */
-  --bg:        #0d1117;   /* H210 L07 */
-  --surface:   #161b22;   /* H210 L12  +5 */
-  --border:    #30363d;   /* H210 L25  +13 */
-  --fg:        #c9d1d9;   /* H210 L82  +57 */
-  --muted:     #8b949e;   /* H210 L61  +36 */
-  --accent:    #388bfd;   /* H210 S92 L56 – links / buttons */
-  --code:      #d2a8ff;   /* H265 S100 L80 –  +55° rotate */
-  --highlights:#56d364;   /* H140 S60  L54 – −70° rotate */
+  /* — Dark (default) — */
+  --bg:        #0e1117;   /* super-dark navy                  */
+  --surface:   #151b23;   /* slightly lighter card background */
+  --border:    #2a313d;
+  --fg:        #d0d7de;   /* main text                        */
+  --muted:     #8b949e;   /* secondary text                   */
+  --accent:    #3e8cff;   /* link / button blue               */
+  --code:      #cfa8ff;   /* lavender for <code>              */
+  --highlights:#32d583;   /* mint success / “green blips”     */
   --radius:    12px;
+
+  /* Vanta FOG (dark) */
+  --vanta-highlight:  #3e8cff;  /* same blue as links  */
+  --vanta-midtone:    #a04dff;  /* violet glow         */
+  --vanta-lowlight:   #32d583;  /* matches highlights  */
+  --vanta-base:       #070a10;  /* almost-black fog    */
+  --vanta-blur:       0.70;
+  --vanta-speed:      2.00;
+  --vanta-zoom:       1.60;
+  --vanta-minh:       200;
+  --vanta-minw:       200;
+  --vanta-mouse:      1;
+  --vanta-touch:      1;
+  --vanta-gyro:       0;
 }
 
-@media(prefers-color-scheme: light){
+@media (prefers-color-scheme: light){
   :root{
-    --bg:        #ffffff; /* H210 L100 */
-    --surface:   #f6f8fa; /* H210 L97  – same tint as GitHub Light */
-    --border:    #d0d7de; /* H210 L84 */
-    --fg:        #1f2328; /* H210 L15 */
-    --muted:     #656d76; /* H210 L46 */
-    --accent:    #0969da; /* H210 S90 L47 – same hue, lower L for contrast */
-    --code:      #8250df; /* H265 S70 L58 */
-    --highlights:#1a7f37; /* H140 S65 L29 */
+    /* — Light — */
+    --bg:        #ffffff;  /* clean white                     */
+    --surface:   #faf6f3;  /* warm, very-light neutral        */
+    --border:    #e5dfdb;
+    --fg:        #1e2227;  /* near-black text                 */
+    --muted:     #6b6f77;
+    --accent:    #b74a00;  /* deep burnt-orange (4.5 ✕ on white) */
+    --code:      #5137ff;  /* indigo – echoes Vanta low-light */
+    --highlights:#1a7f37;  /* evergreen OK colour             */
+
+    /* Vanta FOG (light) – **do not change** as requested */
+    --vanta-highlight:  #ffc300;
+    --vanta-midtone:    #ff1f00;
+    --vanta-lowlight:   #2d00ff;
+    --vanta-base:       #ffebeb;
   }
 }
+/* ──────────────────────────────────────────────────────────── */
+
 /* ───────────────────────────────────────────────────────────── */
 
     /* background */
@@ -137,3 +160,12 @@
     }
     /* re-use the old blinking-cursor prompt style, but kill the margin */
     .prompt-bar .prompt{margin:0;}
+
+    /* === Vanta background === */
+#vanta-bg{
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  z-index:-1;         /* behind all real content */
+}
+html,body{margin:0;height:100%}   /* avoids scrollbars */

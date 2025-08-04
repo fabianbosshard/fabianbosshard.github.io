@@ -3,25 +3,25 @@
 
 /* ── GLOBAL COLOR TOKENS ───────────────────────────────────── */
 :root{
-  /* — Dark (default) — */
-  --bg:        #0e1117;   /* super-dark navy                  */
-  --surface:   #151b23;   /* slightly lighter card background */
-  --border:    #2a313d;
-  --fg:        #d0d7de;   /* main text                        */
-  --muted:     #8b949e;   /* secondary text                   */
-  --accent:    #3e8cff;   /* link / button blue               */
-  --code:      #cfa8ff;   /* lavender for <code>              */
-  --highlights:#32d583;   /* mint success / “green blips”     */
+  /* â€” Dark (default) â€” */
+  --bg:        #0f1418;   /* very dark ebony with blue undertone */
+  --surface:   #1a1f26;   /* dark slate for cards */
+  --border:    #2d343d;   /* muted dark border */
+  --fg:        #d7d4cf;   /* warm offâ€‘white for main text */
+  --muted:     #8e8a85;   /* soft warm grey for secondary text */
+  --accent:    #e46a37;   /* burnt orange â€“ pops against dark background */
+  --code:      #9186ff;   /* periwinkle/cosmic cobalt for <code> */
+  --highlights:#50b67a;   /* sageâ€‘toâ€‘emerald for success or highlights */
   --radius:    12px;
 
-  /* Vanta FOG (dark) */
-  --vanta-highlight:  #3e8cff;  /* same blue as links  */
-  --vanta-midtone:    #a04dff;  /* violet glow         */
-  --vanta-lowlight:   #32d583;  /* matches highlights  */
-  --vanta-base:       #070a10;  /* almost-black fog    */
-  --vanta-blur:       0.70;
+  /* Vanta FOG (dark) â€“ modernised colours */
+  --vanta-highlight:  #3d8ad3;  /* cobalt blue â€“ echoes trending deep bluesã€590516591090948â€ L127-L139ã€‘ */
+  --vanta-midtone:    #d04f3f;  /* burnt coral â€“ draws from ruby and mahogany tonesã€590516591090948â€ L53-L71ã€‘ */
+  --vanta-lowlight:   #4e2646;  /* mulberry â€“ deep purple undertone */
+  --vanta-base:       #111925;  /* nightâ€‘sky navy base */
+  --vanta-blur:       0.80;
   --vanta-speed:      2.00;
-  --vanta-zoom:       1.60;
+  --vanta-zoom:       1.00;
   --vanta-minh:       200;
   --vanta-minw:       200;
   --vanta-mouse:      1;
@@ -31,17 +31,17 @@
 
 @media (prefers-color-scheme: light){
   :root{
-    /* — Light — */
-    --bg:        #ffffff;  /* clean white                     */
-    --surface:   #faf6f3;  /* warm, very-light neutral        */
-    --border:    #e5dfdb;
-    --fg:        #1e2227;  /* near-black text                 */
-    --muted:     #6b6f77;
-    --accent:    #b74a00;  /* deep burnt-orange (4.5 ✕ on white) */
-    --code:      #5137ff;  /* indigo – echoes Vanta low-light */
-    --highlights:#1a7f37;  /* evergreen OK colour             */
+    /* â€” Light â€” */
+    --bg:        #fffaf6;  /* warm offâ€‘white base inspired by honeyed neutralsã€590516591090948â€ L53-L71ã€‘ */
+    --surface:   #f7f2ed;  /* pale beige for card backgrounds */
+    --border:    #e4dcd3;  /* tan border */
+    --fg:        #2e2a27;  /* espresso brown for primary text */
+    --muted:     #7a736f;  /* soft taupe for secondary text */
+    --accent:    #c25b24;  /* caramel/burnt orange â€“ ties into vanta midâ€‘tone red */
+    --code:      #3e38ec;  /* indigo/cosmic cobalt â€“ echoes vanta lowâ€‘light blue */
+    --highlights:#4c8d58;  /* sage green for OK/success messages */
 
-    /* Vanta FOG (light) – **do not change** as requested */
+    /* Vanta FOG (light) â€“ **do not change** */
     --vanta-highlight:  #ffc300;
     --vanta-midtone:    #ff1f00;
     --vanta-lowlight:   #2d00ff;

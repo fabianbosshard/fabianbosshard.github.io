@@ -13,20 +13,6 @@
   --code:      #9186ff;   /* periwinkle/cosmic cobalt for <code> */
   --highlights:#50b67a;   /* sageâ€‘toâ€‘emerald for success or highlights */
   --radius:    12px;
-
-  /* Vanta FOG (dark) â€“ modernised colours */
-  --vanta-highlight:  #3d8ad3;  /* cobalt blue â€“ echoes trending deep bluesã€590516591090948â€ L127-L139ã€‘ */
-  --vanta-midtone:    #d04f3f;  /* burnt coral â€“ draws from ruby and mahogany tonesã€590516591090948â€ L53-L71ã€‘ */
-  --vanta-lowlight:   #4e2646;  /* mulberry â€“ deep purple undertone */
-  --vanta-base:       #111925;  /* nightâ€‘sky navy base */
-  --vanta-blur:       0.80;
-  --vanta-speed:      2.00;
-  --vanta-zoom:       1.00;
-  --vanta-minh:       200;
-  --vanta-minw:       200;
-  --vanta-mouse:      1;
-  --vanta-touch:      1;
-  --vanta-gyro:       0;
 }
 
 @media (prefers-color-scheme: light){
@@ -40,12 +26,6 @@
     --accent:    #c25b24;  /* caramel/burnt orange â€“ ties into vanta midâ€‘tone red */
     --code:      #3e38ec;  /* indigo/cosmic cobalt â€“ echoes vanta lowâ€‘light blue */
     --highlights:#4c8d58;  /* sage green for OK/success messages */
-
-    /* Vanta FOG (light) â€“ **do not change** */
-    --vanta-highlight:  #ffc300;
-    --vanta-midtone:    #ff1f00;
-    --vanta-lowlight:   #2d00ff;
-    --vanta-base:       #ffebeb;
   }
 }
 /* ──────────────────────────────────────────────────────────── */
@@ -161,11 +141,4 @@
     /* re-use the old blinking-cursor prompt style, but kill the margin */
     .prompt-bar .prompt{margin:0;}
 
-    /* === Vanta background === */
-#vanta-bg{
-  position:fixed;
-  top:0;left:0;
-  width:100%;height:100%;
-  z-index:-1;         /* behind all real content */
-}
 html,body{margin:0;height:100%}   /* avoids scrollbars */

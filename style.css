@@ -87,7 +87,7 @@
   justify-content: center;
   width: 48px;
   height: 48px;
-  background: var(--highlights);
+  background: var(--fg);
   border-radius: 50%;
   text-decoration: none;
   transition: background 0.3s, transform 0.15s;

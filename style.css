@@ -141,17 +141,6 @@
       margin-bottom: 1.5rem;
     }
 
-    .social {
-      margin-top: 2rem;
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-    .social a {
-      margin: 0 0.5rem;
-      color: var(--muted);
-      text-decoration: none;
-    }
-
     /* ─── FOOTER ─── */
     footer {
       background: var(--surface);

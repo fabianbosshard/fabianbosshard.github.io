@@ -111,6 +111,19 @@
     .badges img{height:20px;}
     .repo-link{text-align:center;margin:.5rem 0;}
 
+    /* ─── BACK BUTTON ─── */
+    .back-button {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .back-button a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
     .summaries {
       margin-top: 1rem;
       font-size: 1.2rem;

@@ -79,7 +79,7 @@
     main{
       max-width:1200px;
       margin:0 auto;
-      padding:0 2rem 5rem;
+      padding:0 0.8rem 5rem; /* should match the padding of the prompt!!! */
     }
     section{
       margin-top:4rem;opacity:0;transform:translateY(40px);transition:all .6s ease;}
@@ -203,7 +203,7 @@
         display: block;
         max-width: 1200px;
         margin: 0 auto;
-        padding:0rem 2rem 0rem;
+        padding:0rem 0.8rem 0rem; /* should match the padding of main!!! */
       }
 
 html,body{margin:0;height:100%}   /* avoids scrollbars */

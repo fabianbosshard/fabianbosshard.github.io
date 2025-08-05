@@ -9,8 +9,8 @@
   --border:    #2d343d;   /* muted dark border */
   --fg:        #d7d4cf;   /* warm offâ€‘white for main text */
   --muted:     #8e8a85;   /* soft warm grey for secondary text */
-  --accent:    #e46a37;   /* burnt orange â€“ pops against dark background */
-  --code:      #9186ff;   /* periwinkle/cosmic cobalt for <code> */
+  --code:    #e46a37;   /* burnt orange â€“ pops against dark background */
+  --accent:      #9186ff;   /* periwinkle/cosmic cobalt for <code> */
   --highlights:#50b67a;   /* sageâ€‘toâ€‘emerald for success or highlights */
   --radius:    12px;
 }
@@ -23,8 +23,8 @@
     --border:    #e4dcd3;  /* tan border */
     --fg:        #2e2a27;  /* espresso brown for primary text */
     --muted:     #7a736f;  /* soft taupe for secondary text */
-    --accent:    #c25b24;  /* caramel/burnt orange â€“ ties into vanta midâ€‘tone red */
-    --code:      #3e38ec;  /* indigo/cosmic cobalt â€“ echoes vanta lowâ€‘light blue */
+    --code:    #c25b24;  /* caramel/burnt orange â€“ ties into vanta midâ€‘tone red */
+    --accent:    #3e38ec;  /* indigo/cosmic cobalt â€“ echoes vanta lowâ€‘light blue */
     --highlights:#4c8d58;  /* sage green for OK/success messages */
   }
 }
@@ -124,7 +124,7 @@
     /* ─── BACK BUTTON ─── */
     .back-button {
       text-align: center;
-      margin-top: 2rem;
+      margin-top: 6rem;
     }
     .back-button a {
       color: var(--accent);

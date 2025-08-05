@@ -111,8 +111,47 @@
     .badges img{height:20px;}
     .repo-link{text-align:center;margin:.5rem 0;}
 
+    .summaries {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .social {
+      margin-top: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .social a {
+      margin: 0 0.5rem;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
     /* ─── FOOTER ─── */
-    footer{margin-top:4rem;margin-bottom:2rem;text-align:center;font-size:.875rem;color:var(--muted);}    
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 1rem;
+      text-align: center;
+    }
+    footer .footer-content a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    footer small {
+      display: block;
+      margin-top: 0.5rem;
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+    footer verysmall {
+      display: block;
+      margin-top: 0.5rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+    } 
 
     /* ─── PULSE-CURSOR ─── */
     .prompt{

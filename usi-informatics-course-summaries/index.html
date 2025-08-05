@@ -34,8 +34,6 @@
 </head>
 
 <body>
-  <canvas id="canvas"></canvas>
-
 
     <div class="prompt-bar">
     <span class="prompt">fabian@usi:<a href="../">~</a>/<a href=".">summaries</a>></span>
@@ -145,12 +143,6 @@
     });
   });
 </script>
-  <script>
-    const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}),{threshold:0.15});
-    document.querySelectorAll('section').forEach(s=>io.observe(s));
-  </script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ocanvas/2.8.10/ocanvas.min.js"></script>
-  <script src="../background.js"></script>
+<script src="../main.js"></script>
 </body>
 </html>

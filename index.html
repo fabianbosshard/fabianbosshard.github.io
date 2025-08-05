@@ -49,13 +49,11 @@
 
   <main>
     <!-- Summaries section -->
-    <section id="summaries">
-      <p> <a href="https://fabianbosshard.github.io/usi-informatics-course-summaries/" rel="noopener">list of summaries</a> </p>
+    <section class="summaries">
+      <p> <a href="https://fabianbosshard.github.io/usi-informatics-course-summaries/" rel="noopener">list of USI summaries</a> </p>
     </section>
-  </main>
 
-<footer>
-  <p class="social">
+    <p class="social">
     <a href="https://github.com/fabianbosshard" target="_blank" rel="noopener">
       <img src="icons/github.svg" alt="GitHub">
     </a>
@@ -66,20 +64,15 @@
       <img src="icons/mail.svg" alt="Email">
     </a>
   </p>
-</footer>
+  </main>
 
 <footer>
-  <div class="footer-content">
-    <a href="https://github.com/fabianbosshard/fabianbosshard.github.io">Source on GitHub</a>
-  </div>
-  <div class="footer-content">
-    <small>&copy; 2025 Fabian Bosshard</small>
-  </div>
+    <div class="footer-content">
+      <small><a href="https://github.com/fabianbosshard/fabianbosshard.github.io">Source on GitHub</a></small>
+      <verysmall>&copy; 2025 Fabian Bosshard</verysmall>
+    </div>
 </footer>
 
-  <script>
-    const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}),{threshold:0.15});
-    document.querySelectorAll('section').forEach(s=>io.observe(s));
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>

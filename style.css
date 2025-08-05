@@ -75,6 +75,37 @@
     .button{display:inline-block;margin-top:1.2rem;background:var(--accent);color:#fff;padding:.6em 1.2em;border-radius:var(--radius);font-weight:600;border:none;transition:background .3s;}
     @media(hover:hover) and (pointer:fine){.button:hover{background:#1f6feb;text-decoration:none;}}
 
+/* social buttons */
+.social-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--highlights);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.15s;
+}
+.social-btn i {
+  font-size: 24px;
+  color: var(--bg);
+}
+@media (hover: hover) and (pointer: fine) {
+  .social-btn:hover {
+    background: var(--accent);
+    transform: translateY(-3px);
+  }
+}
+
+
+
+
     /* ─── SECTIONS fade-in on scroll ─── */
     main{
       max-width:1200px;

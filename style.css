@@ -1,4 +1,25 @@
 /* ── GLOBAL COLOR TOKENS ───────────────────────────────────── */
+
+/* CSS HSL */
+:root {
+--space-cadet: hsla(221, 45%, 18%, 1);
+--ghost-white: hsla(240, 47%, 97%, 1);
+--tomato: hsla(9, 100%, 61%, 1);
+--salmon: hsla(9, 99%, 73%, 1);
+--turquoise: hsla(166, 72%, 60%, 1);
+--aquamarine: hsla(167, 100%, 73%, 1);
+--dodger-blue: hsla(206, 100%, 50%, 1);
+--argentinian-blue: hsla(206, 100%, 63%, 1);
+--space-cadet: #1A2744ff;
+--ghost-white: #F4F4FBff;
+--tomato: #FF5436ff;
+--salmon: #FE8975ff;
+--turquoise: #50E3C1ff;
+--aquamarine: #73FFE0ff;
+--dodger-blue: #008FFFff;
+--argentinian-blue: #44ADFFff;
+}
+
 :root {
   /* dark mode */
   --bg:         #000000;
@@ -6,8 +27,8 @@
   --border:     #30363D;
   --fg:         #ffffff;
   --muted:      #8B949E;
-  --code:       #f60e7a;
-  --accent:     #58A6FF;
+  --code:       #ff609a;
+  --accent:     #67aeff;
   --highlights: #79C0FF;
   --shadow:     rgba(255, 255, 255, 0.35);
   --radius:     12px;
@@ -19,10 +40,10 @@
     --border:     #E1E4E8;
     --fg:         #000000;
     --muted:      #6E7781;
-    --code:       #F22E76;
-    --accent:     #0969DA;
+    --code:       #ff005d;
+    --accent:     #0077ff;
     --highlights: #B5E8FF;
-    --shadow:    rgba(0, 0, 0, 0.35);
+    --shadow:     rgba(0, 0, 0, 0.35);
   }
 }
 

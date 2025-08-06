@@ -24,15 +24,15 @@
   }
 }
 
-/* canvas background */
-html,
-#canvas {
-  width: 100%;
-  height: 100%;
-  background: var(--bg);
+/* ── BASE RESET ───────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-/* body: flex layout so footer sticks to bottom on tall screens */
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
@@ -45,39 +45,17 @@ body {
   min-height: 100vh;
 }
 
-#canvas {
-  position: fixed;
-  inset: 0;
-  z-index: -100;
-  pointer-events: none;
-}
-
-/* reset and base styles */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-html {
-  scroll-behavior: smooth;
-}
-
+/* ── TYPOGRAPHY & LINKS ───────────────────────────────────── */
 a {
   color: var(--accent);
   text-decoration: none;
   border-bottom: 1px dashed transparent;
   transition: border-color .3s;
 }
-
-/* hero section */
-header {
-  min-height: 20vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    border-color: var(--accent);
+  }
 }
 h1 {
   font-size: clamp(2.5rem, 6vw, 4rem);
@@ -90,7 +68,37 @@ h1 {
   color: var(--muted);
 }
 
-/* social icons */
+/* ── LAYOUT SECTIONS ──────────────────────────────────────── */
+main {
+  flex: 1 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0.8rem 5rem;
+  width: 100%;
+}
+section {
+  margin-top: 4rem;
+}
+
+section h2 {
+  font-size: clamp(1.75rem, 3.8vw, 2.5rem);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: .5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ── HERO ─────────────────────────────────────────────────── */
+header {
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* ── SOCIAL ICONS ─────────────────────────────────────────── */
 .social-container {
   display: flex;
   gap: 1rem;
@@ -104,7 +112,6 @@ h1 {
   height: 48px;
   background: var(--fg);
   border-radius: 50%;
-  text-decoration: none;
   transition: background 0.3s, transform 0.15s;
 }
 .social-btn i {
@@ -118,32 +125,7 @@ h1 {
   }
 }
 
-/* main section grows to fill vertical space */
-main {
-  flex: 1 0 auto;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 0.8rem 5rem;
-  width: 100%;
-}
-section {
-  margin-top: 4rem;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all .6s ease;
-}
-section.visible {
-  opacity: 1;
-  transform: none;
-}
-section h2 {
-  font-size: clamp(1.75rem, 3.8vw, 2.5rem);
-  border-bottom: 1px solid var(--border);
-  padding-bottom: .5rem;
-  margin-bottom: 1.5rem;
-}
-
-/* cards */
+/* ── CARDS ────────────────────────────────────────────────── */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -155,16 +137,12 @@ section h2 {
   border-radius: var(--radius);
   padding: 1.5rem;
   transition: transform .4s ease, box-shadow .4s ease;
-  position: relative;
   cursor: pointer;
 }
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
     transform: translateY(-6px) scale(1.02);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-  }
-  a:hover {
-    border-color: var(--accent);
   }
 }
 .card h3 {
@@ -182,12 +160,8 @@ section h2 {
   flex-wrap: wrap;
   gap: .75rem;
 }
-.links a {
-  position: relative;
-  z-index: 2;
-}
 
-/* badges & repo link */
+/* ── BADGES & NAVIGATION ─────────────────────────────────── */
 .badges {
   display: flex;
   flex-wrap: wrap;
@@ -198,75 +172,32 @@ section h2 {
 .badges img {
   height: 20px;
 }
-.repo-link {
-  text-align: center;
-  margin: .5rem 0;
-}
-
-/* navigation button */
+.repo-link,
 .nav-button {
   text-align: center;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin: 0.5rem 0 4rem;
 }
 .nav-button a {
-  color: var(--accent);
-  text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
   transition: color 0.3s;
 }
 
-/* summaries helper */
-.summaries {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-/* footer styles */
-footer {
-  background: var(--surface);
-  border-top: 1px solid var(--border);
-  padding: 1.5rem 1rem;
-  text-align: center;
-}
-footer .footer-content a {
-  color: var(--accent);
-  text-decoration: none;
-}
-footer small {
-  display: block;
-  margin-top: 0.5rem;
-  color: var(--muted);
-  font-size: 0.875rem;
-}
-footer verysmall {
-  display: block;
-  margin-top: 0.5rem;
-  color: var(--muted);
-  font-size: 0.75rem;
-}
-
-/* prompt text */
+/* ── PROMPT BAR ───────────────────────────────────────────── */
 .prompt {
   font-family: monospace;
   color: var(--code);
   font-size: 1.2rem;
   display: inline-block;
-  margin-bottom: 2rem;
 }
 .prompt::after {
   content: "_";
   animation: blink 1s steps(2, end) infinite;
 }
 @keyframes blink {
-  0%, 50% { opacity: 1; }
+  0%, 50%   { opacity: 1; }
   50.01%, 100% { opacity: 0; }
 }
-
-/* prompt bar – centred and padded to align with main content */
 .prompt-bar {
   position: sticky;
   top: 0;
@@ -278,19 +209,34 @@ footer verysmall {
   justify-content: center;
 }
 .prompt-bar .prompt {
-  display: block;
   max-width: 1200px;
   width: 100%;
-  margin: 0;
-  padding: 0 0.8rem;   /* same horizontal padding as main */
+  padding: 0 0.8rem;
 }
 
-/* offset headings so the sticky bar doesn’t cover them on anchor navigation */
+/* ── FOOTER ───────────────────────────────────────────────── */
+footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+footer .footer-content a {
+  color: var(--accent);
+}
+footer small,
+footer verysmall {
+  display: block;
+  color: var(--muted);
+}
+footer small {
+  font-size: 0.875rem;
+}
+footer verysmall {
+  font-size: 0.75rem;
+}
+
+/* ── UTILITIES ────────────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
   scroll-margin-top: 4rem;
-}
-
-/* override any stray height:100% rules – the flex layout handles vertical sizing */
-html, body {
-  height: auto;
 }

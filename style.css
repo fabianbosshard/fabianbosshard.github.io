@@ -2,45 +2,42 @@
 /* style.css */
 
 /* ── GLOBAL COLOR TOKENS ───────────────────────────────────── */
-:root{
-  /* â€” Dark (default) â€” */
-  --bg:        #0f1418;   /* very dark ebony with blue undertone */
-  --surface:   #1a1f26;   /* dark slate for cards */
-  --border:    #2d343d;   /* muted dark border */
-  --fg:        #d7d4cf;   /* warm offâ€‘white for main text */
-  --muted:     #8e8a85;   /* soft warm grey for secondary text */
-  --code:    #e46a37;   /* burnt orange â€“ pops against dark background */
-  --accent:      #9186ff;   /* periwinkle/cosmic cobalt for <code> */
-  --highlights:#50b67a;   /* sageâ€‘toâ€‘emerald for success or highlights */
-  --radius:    12px;
+:root {
+  /* dark mode */
+  --bg:         #000000;
+  --surface:    #161B22;
+  --border:     #30363D;
+  --fg:         #ffffff;
+  --muted:      #8B949E;
+  --code:       #F22E76;
+  --accent:     #58A6FF;
+  --highlights: #79C0FF;
+  --radius:     12px;
 }
 
-@media (prefers-color-scheme: light){
-  :root{
-    /* â€” Light â€” */
-    --bg:        #fffaf6;  /* warm offâ€‘white base inspired by honeyed neutralsã€590516591090948â€ L53-L71ã€‘ */
-    --surface:   #f7f2ed;  /* pale beige for card backgrounds */
-    --border:    #e4dcd3;  /* tan border */
-    --fg:        #2e2a27;  /* espresso brown for primary text */
-    --muted:     #7a736f;  /* soft taupe for secondary text */
-    --code:    #c25b24;  /* caramel/burnt orange â€“ ties into vanta midâ€‘tone red */
-    --accent:    #3e38ec;  /* indigo/cosmic cobalt â€“ echoes vanta lowâ€‘light blue */
-    --highlights:#4c8d58;  /* sage green for OK/success messages */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg:         #ffffff;
+    --surface:    #F6F8FA;
+    --border:     #E1E4E8;
+    --fg:         #000000;
+    --muted:      #6E7781;
+    --code:       #F22E76;  
+    --accent:     #0969DA;
+    --highlights: #B5E8FF;
   }
 }
 /* ──────────────────────────────────────────────────────────── */
-
-/* ───────────────────────────────────────────────────────────── */
-
-    /* background */
-    html,              /* full-bleed */
+  
+  
+    html,          
     #canvas {
       width: 100%;
       height: 100%;
       background:var(--bg);
     }
 
-    body {             /* dark stage for green blips */
+    body {      
       margin: 0;
       padding: 0;
       background: transparent;

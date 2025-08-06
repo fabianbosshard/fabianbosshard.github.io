@@ -6,9 +6,10 @@
   --border:     #30363D;
   --fg:         #ffffff;
   --muted:      #8B949E;
-  --code:       #f13a7d;
+  --code:       #f60e7a;
   --accent:     #58A6FF;
   --highlights: #79C0FF;
+  --shadow:     rgba(255, 255, 255, 0.35);
   --radius:     12px;
 }
 @media (prefers-color-scheme: light) {
@@ -21,6 +22,7 @@
     --code:       #F22E76;
     --accent:     #0969DA;
     --highlights: #B5E8FF;
+    --shadow:    rgba(0, 0, 0, 0.35);
   }
 }
 
@@ -36,7 +38,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: transparent;
+  background: var(--bg);;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: var(--fg);
   line-height: 1.6;
@@ -142,7 +144,7 @@ header {
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
     transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 8px 24px var(--shadow);
   }
 }
 .card h3 {
@@ -175,7 +177,7 @@ header {
 .repo-link,
 .nav-button {
   text-align: center;
-  margin: 0.5rem 0 4rem;
+  margin: 5rem 0 3rem;
 }
 .nav-button a {
   font-weight: 600;

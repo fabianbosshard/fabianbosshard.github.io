@@ -1,49 +1,31 @@
-/* ── GLOBAL COLOR TOKENS ───────────────────────────────────── */
+/* ── GITHUB DEFAULT PALETTE  +  CODE GREEN ───────────────── */
 
-/* CSS HSL */
+/* Dark mode (GitHub Dark Default) */
 :root {
---space-cadet: hsla(221, 45%, 18%, 1);
---ghost-white: hsla(240, 47%, 97%, 1);
---tomato: hsla(9, 100%, 61%, 1);
---salmon: hsla(9, 99%, 73%, 1);
---turquoise: hsla(166, 72%, 60%, 1);
---aquamarine: hsla(167, 100%, 73%, 1);
---dodger-blue: hsla(206, 100%, 50%, 1);
---argentinian-blue: hsla(206, 100%, 63%, 1);
---space-cadet: #1A2744ff;
---ghost-white: #F4F4FBff;
---tomato: #FF5436ff;
---salmon: #FE8975ff;
---turquoise: #50E3C1ff;
---aquamarine: #73FFE0ff;
---dodger-blue: #008FFFff;
---argentinian-blue: #44ADFFff;
-}
-
-:root {
-  /* dark mode */
-  --bg:         #000000;
-  --surface:    #161B22;
-  --border:     #30363D;
-  --fg:         #ffffff;
-  --muted:      #8B949E;
-  --code:       #ff609a;
-  --accent:     #67aeff;
-  --highlights: #79C0FF;
-  --shadow:     rgba(255, 255, 255, 0.35);
+  --bg:         #000000;   /* canvas.default */
+  --surface:    #161b22;   /* canvas.subtle  */
+  --border:     #30363d;   /* border.default */
+  --fg:         #c9d1d9;   /* fg.default     */
+  --muted:      #8b949e;   /* fg.muted       */
+  --code:       #7ee787;   /* ✔ syntax green */
+  --accent:     #58a6ff;   /* accent.fg      */
+  --highlights: #79c0ff;   /* blue-300       */
+  --shadow:     rgba(0,0,0,.35);
   --radius:     12px;
 }
+
+/* Light mode (GitHub Light Default) */
 @media (prefers-color-scheme: light) {
   :root {
-    --bg:         #ffffff;
-    --surface:    #F6F8FA;
-    --border:     #E1E4E8;
-    --fg:         #000000;
-    --muted:      #6E7781;
-    --code:       #ff005d;
-    --accent:     #0077ff;
-    --highlights: #B5E8FF;
-    --shadow:     rgba(0, 0, 0, 0.35);
+    --bg:         #ffffff;   /* canvas.default */
+    --surface:    #f6f8fa;   /* canvas.subtle  */
+    --border:     #d0d7de;   /* border.default */
+    --fg:         #24292f;   /* fg.default     */
+    --muted:      #6e7781;   /* fg.muted       */
+    --code:       #2da44e;   /* ✔ GitHub Green */
+    --accent:     #0969da;   /* accent.fg      */
+    --highlights: #79c0ff;   /* blue-300       */
+    --shadow:     rgba(0,0,0,.35);
   }
 }
 
@@ -190,7 +172,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 .badges img {
   height: 20px;
@@ -198,7 +180,7 @@ header {
 .repo-link,
 .nav-button {
   text-align: center;
-  margin: 5rem 0 3rem;
+  margin: 0.5rem 2rem;
 }
 .nav-button a {
   font-weight: 600;

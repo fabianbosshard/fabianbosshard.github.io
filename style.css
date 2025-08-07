@@ -7,7 +7,7 @@
   --border:     #30363d;   /* border.default */
   --fg:         #c9d1d9;   /* fg.default     */
   --muted:      #8b949e;   /* fg.muted       */
-  --code:       #7ee787;   /* ✔ syntax green */
+  --code:       #41B445;   /* ✔ syntax green */
   --accent:     #58a6ff;   /* accent.fg      */
   --highlights: #79c0ff;   /* blue-300       */
   --shadow:     rgba(0,0,0,.35);
@@ -22,7 +22,7 @@
     --border:     #d0d7de;   /* border.default */
     --fg:         #24292f;   /* fg.default     */
     --muted:      #6e7781;   /* fg.muted       */
-    --code:       #2da44e;   /* ✔ GitHub Green */
+    --code:       #41B445;   /* ✔ GitHub Green */
     --accent:     #0969da;   /* accent.fg      */
     --highlights: #79c0ff;   /* blue-300       */
     --shadow:     rgba(0,0,0,.35);

@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Root -->
   <url>
     <loc>https://fabianbosshard.github.io/</loc>
   </url>
+
+  <!-- USI informatics summaries -->
   <url>
     <loc>https://fabianbosshard.github.io/usi-informatics-course-summaries/</loc>
   </url>
-    <url>
+  <url>
     <loc>https://fabianbosshard.github.io/usi-informatics-course-summaries/usi-discrete-structures-summary/</loc>
   </url>
   <url>
@@ -29,5 +32,58 @@
   </url>
   <url>
     <loc>https://fabianbosshard.github.io/usi-informatics-course-summaries/usi-stochastic-methods-summary.pdf</loc>
+  </url>
+
+  <!-- ZHAW systems engineering summaries -->
+  <url>
+    <loc>https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/</loc>
+  </url>
+  <url>
+    <loc>https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/zhaw-calculus-summary.pdf</loc>
+  </url>
+  <url>
+    <loc>https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/zhaw-chemistry-summary.pdf</loc>
+  </url>
+  <url>
+    <loc>https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/zhaw-control-theory-summary.pdf</loc>
+  </url>
+  <url>
+    <loc>https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/zhaw-digital-image-processing-summary.pdf</loc>
+  </url>
+  <url>
+    <loc>https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/zhaw-digital-signal-processing-summary.pdf</loc>
+  </url>
+  <url>
+    <loc>https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/zhaw-electrical-fundamentals-summary.pdf</loc>
+  </url>
+  <url>
+    <loc>https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/zhaw-electronics-summary.pdf</loc>
+  </url>
+  <url>
+    <loc>https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/zhaw-linear-algebra-summary.pdf</loc>
+  </url>
+  <url>
+    <loc>https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/zhaw-machine-learning-summary.pdf</loc>
+  </url>
+  <url>
+    <loc>https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/zhaw-materials-technology-summary.pdf</loc>
+  </url>
+  <url>
+    <loc>https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/zhaw-math-basics-summary.pdf</loc>
+  </url>
+  <url>
+    <loc>https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/zhaw-numerical-methods-summary.pdf</loc>
+  </url>
+  <url>
+    <loc>https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/zhaw-physics-summary.pdf</loc>
+  </url>
+  <url>
+    <loc>https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/zhaw-probability-theory-summary.pdf</loc>
+  </url>
+  <url>
+    <loc>https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/zhaw-robotics-summary.pdf</loc>
+  </url>
+  <url>
+    <loc>https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/zhaw-signals-and-systems-summary.pdf</loc>
   </url>
 </urlset>

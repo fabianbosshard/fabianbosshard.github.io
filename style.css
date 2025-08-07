@@ -177,10 +177,13 @@ header {
 .badges img {
   height: 20px;
 }
-.repo-link,
+.repo-link {
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+}
 .nav-button {
   text-align: center;
-  margin: 0.5rem 2rem;
+  margin: 5rem 0 3rem;
 }
 .nav-button a {
   font-weight: 600;

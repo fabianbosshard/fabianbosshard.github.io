@@ -48,6 +48,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  hyphens: auto;
 }
 
 /* ── TYPOGRAPHY & LINKS ───────────────────────────────────── */
@@ -221,6 +222,13 @@ header {
   width: 100%;
   padding: 0 0.8rem;
 }
+.lang-toggle{
+  position: absolute;
+  right: max(0.8rem, calc((100vw - 1200px)/2 + 0.8rem));
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 1;
+}
 
 /* ── FOOTER ───────────────────────────────────────────────── */
 footer {
@@ -247,4 +255,5 @@ footer verysmall {
 /* ── UTILITIES ────────────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
   scroll-margin-top: 4rem;
+  hyphens: auto;
 }

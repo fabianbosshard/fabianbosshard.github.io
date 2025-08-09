@@ -41,8 +41,25 @@
   </url>
 
   <!-- ZHAW systems engineering summaries -->
+<!-- (EN) with alternates -->
   <url>
     <loc>https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/</loc>
+    <xhtml:link rel="alternate" hreflang="en"
+      href="https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/"/>
+    <xhtml:link rel="alternate" hreflang="de"
+      href="https://fabianbosshard.github.io/de/zhaw-systemtechnik-zusammenfassungen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default"
+      href="https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/"/>
+  </url>
+  <!-- (DE) with alternates -->
+  <url>
+    <loc>https://fabianbosshard.github.io/de/zhaw-systemtechnik-zusammenfassungen/</loc>
+    <xhtml:link rel="alternate" hreflang="en"
+      href="https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/"/>
+    <xhtml:link rel="alternate" hreflang="de"
+      href="https://fabianbosshard.github.io/de/zhaw-systemtechnik-zusammenfassungen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default"
+      href="https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/"/>
   </url>
   <url>
     <loc>https://fabianbosshard.github.io/zhaw-systems-engineering-summaries/zhaw-calculus-summary.pdf</loc>

@@ -1,34 +1,37 @@
 /* ── GITHUB DEFAULT PALETTE  +  CODE GREEN ───────────────── */
 
-/* Dark mode (GitHub Dark Default) */
+/* ── ENHANCED COLOR PALETTE ───────────────────────────────── */
+
+/* ── HACKER / FUTURISTIC PALETTE ─────────────────────────── */
+
+/* Dark mode (primary theme) */
 :root {
-  --bg:         #000000;   /* canvas.default */
-  --surface:    #161b22;   /* canvas.subtle  */
-  --border:     #30363d;   /* border.default */
-  --fg:         #c9d1d9;   /* fg.default     */
-  --muted:      #8b949e;   /* fg.muted       */
-  --code:       #41B445;   /* ✔ syntax green */
-  --accent:     #58a6ff;   /* accent.fg      */
-  --highlights: #79c0ff;   /* blue-300       */
-  --shadow:     rgba(0,0,0,.35);
-  --radius:     12px;
+  --bg:         #0a0f14;   
+  --surface:    #111820;   
+  --border:     #1f2a38;   
+  --fg:         #ffffff;   
+  --muted:      #bebebe;  
+  --code:       #00ff9f;   
+  --accent:     #00e5ff;   
+  --highlights: #ff007c;  
+  --shadow:     rgba(0, 255, 159, 0.25);
+  --radius:     10px;
 }
 
-/* Light mode (GitHub Light Default) */
+/* Light mode (secondary theme) */
 @media (prefers-color-scheme: light) {
   :root {
-    --bg:         #ffffff;   /* canvas.default */
-    --surface:    #f6f8fa;   /* canvas.subtle  */
-    --border:     #d0d7de;   /* border.default */
-    --fg:         #24292f;   /* fg.default     */
-    --muted:      #6e7781;   /* fg.muted       */
-    --code:       #2da44e;   /* ✔ GitHub Green */
-    --accent:     #0969da;   /* accent.fg      */
-    --highlights: #79c0ff;   /* blue-300       */
-    --shadow:     rgba(0,0,0,.35);
+    --bg:         #f7f8fa;  
+    --surface:    #ffffff;  
+    --border:     #cbd5e1;  
+    --fg:         #1e293b;  
+    --muted:      #475569;  
+    --code:       #2cc997;  
+    --accent:     #0ea5e9;  
+    --highlights: #db2777;  
+    --shadow:     rgba(233, 14, 164, 0.25);
   }
 }
-
 /* ── BASE RESET ───────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;

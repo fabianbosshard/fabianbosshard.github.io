@@ -146,13 +146,16 @@ header {
   border-radius: var(--radius);
   padding: 1.5rem;
   transition: transform .4s ease, box-shadow .4s ease;
-  cursor: pointer;
+  cursor: default;                 /* <-- default: not clickable */
 }
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
     transform: translateY(-6px) scale(1.02);
     box-shadow: 0 8px 24px var(--shadow);
   }
+}
+.card--link {
+  cursor: pointer;
 }
 .card h3 {
   font-size: 1.25rem;
